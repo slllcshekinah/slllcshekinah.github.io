@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>2025年，我願意參與事奉、建造教會！(請填寫您的名字/暱稱)</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" title="2025年，我願意參與事奉、建造教會！(請填寫您的名字/暱稱)">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- 隱藏的 iframe -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleFormSuccess();"></iframe>
+
+    <form id="restaurant-form" action="https://docs.google.com/forms/d/e/13QZkUgXDTh5Km4r4cb0XCk-uyTK6D19TsOTJAvY39uk/formResponse" method="post" target="hidden_iframe" onsubmit="disableSubmitButton();">
+        <div class="container">
+            <div class="form-group">
+                <label for="fname">2025年，我願意參與事奉、建造教會！(請填寫您的名字/暱稱)<span style="color:red">*</span></label>
+                <input type="text" class="form-control input-lg" id="fname" name="entry.1804309397" onchange="hideAlert('alert-name');">
+                <div class="form-alert-message inline-message" id="alert-name" style="display: none; color: red;">請不要空白QQ</div>
+            </div>
+            <div class="text-center">
+                <input type="submit" value="送  出" id="btn-submit-pledge" style="color:white;" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+
+    <script>
+        // 隱藏錯誤提示
+        function hideAlert(alertId) {
+            document.getElementById(alertId).style.display = 'none';
+        }
+
+        // 禁用送出按鈕
+        function disableSubmitButton() {
+            document.getElementById('btn-submit-pledge').disabled = true;
+        }
+
+        // 處理表單送出成功後的行為
+        function handleFormSuccess() {
+            const inputField = document.getElementById('fname');
+            
+            // 如果欄位內容為空，則不執行後續動作（避免第一次載入時執行）
+            if (!inputField.value.trim()) {
+                location.reload();
+                return;
+            }
+
+            // 顯示成功提示
+            alert('成功送出！');
+
+            // 清空表單欄位
+            document.getElementById('restaurant-form').reset();
+
+            // 重新啟用送出按鈕
+            document.getElementById('btn-submit-pledge').disabled = false;
+        }
+    </script>
+</body>
+
+</html>
