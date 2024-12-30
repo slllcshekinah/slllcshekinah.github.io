@@ -30,5 +30,22 @@
             </div>
         </div>
     </form>
+
+    <script>
+        // 隱藏錯誤提示
+        function hideAlert(alertId) {
+            document.getElementById(alertId).style.display = 'none';
+        }
+
+        // 表單送出後的行為
+        function onFormSubmitted() {
+            // 顯示成功提示
+            alert('成功送出！');
+
+            // 清空表單欄位
+            document.getElementById('restaurant-form').reset();
+        }
+    </script>
+    
 </body>
 </html>
