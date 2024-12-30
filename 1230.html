@@ -50,6 +50,7 @@
             
             // 如果欄位內容為空，則不執行後續動作（避免第一次載入時執行）
             if (!inputField.value.trim()) {
+                location.reload();
                 return;
             }
 
