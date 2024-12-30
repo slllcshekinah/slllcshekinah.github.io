@@ -20,7 +20,7 @@
 
 <body>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(typeof sent_redirect!='undefined'){window.location='https://online.slllc.org.tw/';}"></iframe>
-    <form action="https://docs.google.com/forms/d/e/1M6I1MUaoaFhgblbg1PRbr0KSWp-8bZB_auwJEwDJ1XU/formResponse" method="post" target="hidden_iframe" onsubmit="return submitFrom();sent_redirect=true;">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd0lKpj1yPeHa3lVXc7VvKe3eShZa2Mkebx8DGYvtmLpdtapQ/viewform" method="post" target="hidden_iframe" onsubmit="return submitFrom();sent_redirect=true;">
 		
 		<div class="container-top">
 			<div id="image-container">
@@ -65,111 +65,14 @@
 				<div class="right-top">
 					<h2 style="color:#785AA5;font-size:24px;font-weight:bold;text-align: left;">奉獻方式</h2>
 				</div>
-				<div class="right-bottom">
-					<p>
-						※會友專屬銀行帳號奉獻(免申請)
-						<br/>
-						戶名：士林靈糧堂 銀行：國泰世華大直分行013 帳號：110-506-099773
-						<br/>
-						宣教奉獻：4400＋您的手機號碼(10碼)(ex:4400+0912345678)
-						
-						<br/><br/>
-						※國外匯款、信用卡或更多奉獻方式，請至教會官網「線上奉獻」專區查詢
-						
-						<br/><br/>
-						※如欲現金奉獻，或有任何奉獻相關問題，敬請撥打奉獻服務專線02-7736-0004</p>
-					</p>
-				</div>
 			</div>
 		</div>
         <div class="container">
             <div class="form-group">
                 <label for="fname">姓名<span style="color:red">*</span></label>
-                <input type="text" class="form-control input-lg" id="fname" name="entry.486257085" onchange="hideAlert('alert-name');">
+                <input type="text" class="form-control input-lg" id="fname" name="entry.1804309397" onchange="hideAlert('alert-name');">
                 <div class="form-alert-message inline-message" id="alert-name">請填寫姓名</div>
             </div>
-			<div class="form-group">
-				<label for="fcountry">牧區<span style="color:red">*</span></label>
-				<select class="form-control" id="fpastoralarea" name="entry.913066690" onchange="hideAlert('alert-pastoralarea');">
-					<option>請選擇</option>
-					<option>成人第一牧區</option>
-					<option>成人第二牧區</option>
-					<option>成人第三牧區</option>
-					<option>成人第四牧區</option>
-					<option>成人第五牧區</option>
-					<option>成人第六牧區</option>
-					<option>成人第七牧區</option>
-					<option>成人第八牧區</option>
-					<option>成人第九牧區</option>
-					<option>成人第十牧區</option>
-					<option>華冠牧區</option>
-					<option>青年牧區</option>
-					<option>北投福音中心</option>
-					<option>淡水福音中心</option>
-					<option>新店福音中心</option>
-					<option>雙和福音中心</option>
-					<option>三重福音中心</option>
-					<option>桃園福音中心</option>
-					<option>台中福音中心</option>
-					<option>鳳林福音中心</option>
-					<option>胡志明福音中心</option>
-					<option>無牧區</option>
-				</select>
-				<div class="form-alert-message inline-message" id="alert-pastoralarea">請選擇牧區</div>
-			</div>
-            <div class="form-group">
-                <label for="fmobile">手機<span style="color:red">*</span></label>
-                <input type="text" class="form-control input-lg" id="fmobile" name="entry.1665616532" onchange="hideAlert('alert-mobile');">
-				<div class="form-alert-message inline-message" id="alert-mobile">請填寫手機</div>
-            </div>			
-            <div class="form-group">
-                <label for="femail">E-mail<span style="color:red">*</span></label>
-                <input type="email" class="form-control input-lg" id="femail" name="entry.1574419078" onchange="hideAlert('alert-email');">
-                <div class="form-alert-message inline-message" id="alert-email">請填寫E-mail</div>
-            </div>
-            <div class="form-group">
-                <label for="ffaith">我願意認獻<span style="color:red">*</span></label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="entry.1392595456" id="fpledge" value="一次奉獻" onchange="checkPledgeValue();hideAlert('alert-pledge');">
-                    <label class="form-check-label" for="by-year">
-                        一次奉獻
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="entry.1392595456" id="fpledge" value="按月奉獻" onchange="checkPledgeValue();hideAlert('alert-pledge');">
-                    <label class="form-check-label" for="by-month">
-                        按月奉獻
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="entry.1392595456" id="fpledge" value="其他" onchange="checkPledgeValue();hideAlert('alert-pledge');">
-                    <label class="form-check-label" for="by-other">
-                        其他
-                    </label>
-                </div>				
-                <div class="form-alert-message inline-message" id="alert-pledge">請選擇一項</div>
-            </div>
-			<div class="form-group" id="pledge-once" style="display:none;">
-                <label for="fpledgeonce">一次奉獻金額<span style="color:red">*</span></label>
-                <input type="text" class="form-control input-lg" id="fpledgeonce" name="entry.1593544379" onchange="hideAlert('alert-pledge-once');">
-                <div class="form-alert-message inline-message" id="alert-pledge-once">請填寫一次奉獻金額</div>
-            </div>
-			<div class="form-group" id="pledge-monthly" style="display:none;">
-                <label for="fpledgemonthly">每月奉獻金額<span style="color:red">*</span></label>
-                <input type="text" class="form-control input-lg" id="fpledgemonthly" name="entry.1664217116" onchange="hideAlert('alert-pledge-monthly');">
-                <div class="form-alert-message inline-message" id="alert-pledge-monthly">請填寫每月奉獻金額</div>
-            </div>
-			<div class="form-group" id="pledge-detail" style="display:none;">
-                <label for="fpledgedetail">請說明<span style="color:red">*</span></label>
-                <input type="text" class="form-control input-lg" id="fpledgedetail" name="entry.1061255020" onchange="hideAlert('alert-pledge-detail');">
-                <div class="form-alert-message inline-message" id="alert-pledge-detail">請填寫說明</div>
-            </div>
-			<div class="form-group" id="pledge-other" style="display:none;">
-                <label for="fpledgeother">總奉獻金額<span style="color:red">*</span></label>
-                <input type="text" class="form-control input-lg" id="fpledgeother" name="entry.1438449452" onchange="hideAlert('alert-pledge-other');">
-                <div class="form-alert-message inline-message" id="alert-pledge-other">請填寫總奉獻金額</div>
-            </div>			
-			
             <div class="text-center">
                 <input type="submit" value="送  出" id="btn-submit-pledge" style="color:white;">
             </div>
