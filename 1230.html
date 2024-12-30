@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>最喜歡的餐廳！</title>
+    <title>最喜歡的餐廳</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" title="最喜歡的餐廳">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
     <!-- 隱藏的 iframe -->
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleFormSuccess();"></iframe>
 
-    <form id="restaurant-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0lKpj1yPeHa3lVXc7VvKe3eShZa2Mkebx8DGYvtmLpdtapQ/formResponse" method="post" target="hidden_iframe">
+    <form id="restaurant-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0lKpj1yPeHa3lVXc7VvKe3eShZa2Mkebx8DGYvtmLpdtapQ/formResponse" method="post" target="hidden_iframe" onsubmit="disableSubmitButton();">
         <div class="container">
             <div class="form-group">
                 <label for="fname">最喜歡的餐廳<span style="color:red">*</span></label>
@@ -39,6 +39,11 @@
             document.getElementById(alertId).style.display = 'none';
         }
 
+        // 禁用送出按鈕
+        function disableSubmitButton() {
+            document.getElementById('btn-submit-pledge').disabled = true;
+        }
+
         // 處理表單送出成功後的行為
         function handleFormSuccess() {
             const inputField = document.getElementById('fname');
@@ -53,6 +58,9 @@
 
             // 清空表單欄位
             document.getElementById('restaurant-form').reset();
+
+            // 重新啟用送出按鈕
+            document.getElementById('btn-submit-pledge').disabled = false;
         }
     </script>
 </body>
