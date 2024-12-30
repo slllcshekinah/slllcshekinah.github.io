@@ -47,15 +47,15 @@
             if (!inputField.value.trim()) {
                 document.getElementById('alert-name').style.display = 'block';
                 return false; // 阻止送出
-            }
-
-            // 顯示成功提示
+            } else {
+                // 顯示成功提示
             alert('成功送出！');
 
             // 清空表單欄位
             document.getElementById('restaurant-form').reset();
 
             return true; // 繼續送出表單
+            }
         }
     </script>
 </body>
