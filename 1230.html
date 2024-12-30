@@ -18,7 +18,7 @@
 
 <body>
     <!-- 隱藏的 iframe -->
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(typeof sent_redirect!='undefined'){window.location='https://online.slllc.org.tw/';}"></iframe>
 
     <form id="restaurant-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0lKpj1yPeHa3lVXc7VvKe3eShZa2Mkebx8DGYvtmLpdtapQ/formResponse" method="post" target="hidden_iframe" onsubmit="return handleSubmit();">
         <div class="container">
