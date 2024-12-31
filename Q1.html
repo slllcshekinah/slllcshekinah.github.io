@@ -26,22 +26,13 @@
             background: url('https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/background-01.jpg?raw=true') no-repeat center center fixed;
             background-size: cover;
         }
+    
+        #question {
+            width: 90vw;
+            height: 55.2vw;
+            background: url('https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/Q1.png?raw=true') no-repeat center center;
+        }
         
-    body::before {
-        content: ''; /* 伪元素內容 */
-        position: absolute; /* 絕對定位 */
-        top: 15%; /* 從頂部開始往下 10% */
-        left: 50%; /* 水平居中 */
-        transform: translateX(-50%); /* 修正水平位置 */
-        width: auto; /* 保持圖片的原始比例 */
-        height: auto; /* 保持圖片的原始比例 */
-        max-width: 80%; /* 限制圖片最大寬度 */
-        background: url('https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/Q1.png?raw=true') no-repeat center center;
-        background-size: contain; /* 保持圖片尺寸，不拉伸 */
-        z-index: 1;
-        pointer-events: none; /* 確保不影響點擊操作 */
-    }
-
         .form-group {
             position: fixed; /* 固定於畫面上 */
             top: 38%; /* 設定頂部距離為視窗高度的 30% */
@@ -69,6 +60,7 @@
 
 <body>
     <!-- 隱藏的 iframe -->
+        <div id="question">
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleFormSuccess();"></iframe>
     <form id="restaurant-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0lKpj1yPeHa3lVXc7VvKe3eShZa2Mkebx8DGYvtmLpdtapQ/formResponse" method="post" target="hidden_iframe" onsubmit="disableSubmitButton();">
         <div class="form-group">
@@ -76,6 +68,7 @@
             </div>
             <div class="text-center">
     <input type="image" src="https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/go-02.png?raw=true" alt="送出" id="btn-submit-pledge" class="btn-submit-image">
+</div>
 </div>
 
     </form>
