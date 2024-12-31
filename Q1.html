@@ -38,9 +38,14 @@
         max-width: 400px; /* 限制最大寬度 */
     }
 
-        .btn-primary {
-            width: 100%;
-        }
+        .btn-submit-image {
+        top: 50%; /* 設定頂部距離為視窗高度的 30% */
+    width: 100px; /* 設定圖片寬度 */
+    height: auto; /* 確保比例不變 */
+    border: none; /* 移除按鈕邊框 */
+    cursor: pointer; /* 滑鼠變成手形 */
+}
+
     </style>
 </head>
 
@@ -52,8 +57,9 @@
                 <input type="text" class="form-control input-lg" id="fname" name="entry.1804309397" onchange="hideAlert('alert-name');">
             </div>
             <div class="text-center">
-                <input type="submit" value="送  出" id="btn-submit-pledge" style="color:white;" class="btn btn-primary">
-            </div>
+    <input type="image" src="https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/Go-02.png?raw=true" alt="送出" id="btn-submit-pledge" class="btn-submit-image">
+</div>
+
     </form>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
