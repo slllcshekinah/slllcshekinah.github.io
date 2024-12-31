@@ -24,15 +24,20 @@
         body {
     background: url('https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/%E5%95%8F%E9%A1%8C1-01.jpg?raw=true') no-repeat center center fixed;
     background-size: cover;
-    height: 100vh; /* 視窗高度 */
 }
 
         .container {
-            background: rgba(255, 255, 255, 0.8); /* 半透明背景 */
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 10%;
-        }
+        position: fixed; /* 固定於畫面上 */
+        top: 30%; /* 設定頂部距離為視窗高度的 30% */
+        left: 50%; /* 水平置中 */
+        transform: translate(-50%, -50%); /* 修正位置偏移 */
+        background: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 加一點陰影美化 */
+        width: 80%; /* 適合行動裝置的寬度 */
+        max-width: 400px; /* 限制最大寬度 */
+    }
 
         .form-group label {
             font-weight: bold;
@@ -47,12 +52,16 @@
 <body>
     <!-- 隱藏的 iframe -->
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleFormSuccess();"></iframe>
-
     <form id="restaurant-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0lKpj1yPeHa3lVXc7VvKe3eShZa2Mkebx8DGYvtmLpdtapQ/formResponse" method="post" target="hidden_iframe" onsubmit="disableSubmitButton();">
-            <input type="text" id="fname" name="entry.1804309397" style="padding-top: 30vh;" onchange="hideAlert('alert-name');">
+        <div class="container">
+            <div class="form-group">
+                <input type="text" class="form-control input-lg" id="fname" name="entry.1804309397" onchange="hideAlert('alert-name');">
+            </div>
+            <div class="text-center">
                 <input type="submit" value="送  出" id="btn-submit-pledge" style="color:white;" class="btn btn-primary">
+            </div>
+        </div>
     </form>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
     const bodyStyle = getComputedStyle(document.body);
