@@ -56,7 +56,7 @@
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="handleFormSuccess();"></iframe>
     <form id="restaurant-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd0lKpj1yPeHa3lVXc7VvKe3eShZa2Mkebx8DGYvtmLpdtapQ/formResponse" method="post" target="hidden_iframe" onsubmit="disableSubmitButton();">
         <div class="form-group">
-                <input type="text" class="form-control input-lg" id="fname" name="entry.1804309397" onchange="hideAlert('alert-name');" style="text-align: center;">
+                <input type="text" class="form-control input-lg" id="fname" name="entry.1804309397" style="text-align: center;">
             </div>
             <div class="text-center">
     <input type="image" src="https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/Go-02.png?raw=true" alt="送出" id="btn-submit-pledge" class="btn-submit-image">
@@ -69,11 +69,6 @@
     const topPadding = parseInt(bodyStyle.getPropertyValue('padding-top')) || 0;
     document.body.style.paddingTop = `${topPadding + window.innerHeight * 0.02}px`; // 自適應2%高度
 });
-        
-        // 隱藏錯誤提示
-        function hideAlert(alertId) {
-            document.getElementById(alertId).style.display = 'none';
-        }
 
         // 禁用送出按鈕
         function disableSubmitButton() {
