@@ -27,7 +27,7 @@
             background-size: cover;
         }
         
-    body::after {
+    body::before {
         content: ''; /* 伪元素內容 */
         position: absolute; /* 絕對定位 */
         top: 15%; /* 從頂部開始往下 10% */
@@ -38,6 +38,7 @@
         max-width: 80%; /* 限制圖片最大寬度 */
         background: url('https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/Q1.png?raw=true') no-repeat center center;
         background-size: contain; /* 保持圖片尺寸，不拉伸 */
+        z-index: 1;
         pointer-events: none; /* 確保不影響點擊操作 */
     }
 
