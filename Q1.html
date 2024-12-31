@@ -25,12 +25,13 @@
              position: relative; /* 為了伪元素定位 */
             background: url('https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/background-01.jpg?raw=true') no-repeat center center fixed;
             background-size: cover;
+            z-index: -1; /* 設置在背景下層 */
         }
         
     body::before {
         content: ''; /* 伪元素內容 */
         position: absolute; /* 絕對定位 */
-        top: 10%; /* 從頂部開始往下 10% */
+        top: 15%; /* 從頂部開始往下 10% */
         left: 50%; /* 水平居中 */
         transform: translateX(-50%); /* 修正水平位置 */
         width: auto; /* 保持圖片的原始比例 */
@@ -38,7 +39,6 @@
         max-width: 80%; /* 限制圖片最大寬度 */
         background: url('https://github.com/slllcshekinah/slllcshekinah.github.io/blob/main/Q1.png?raw=true') no-repeat center center;
         background-size: contain; /* 保持圖片尺寸，不拉伸 */
-        z-index: -1; /* 設置在背景下層 */
         pointer-events: none; /* 確保不影響點擊操作 */
     }
 
